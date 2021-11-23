@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/nathanjolivet/code/NathanJolivetWeb/TaxiFareModel/mlruns/1/933e215f11124691ab3596e53cf1f530/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 933e215f11124691ab3596e53cf1f530
+run_uuid: 933e215f11124691ab3596e53cf1f530
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1637673968246
+status: 1
+tags: []
+user_id: unknown
