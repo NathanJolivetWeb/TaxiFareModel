@@ -10,6 +10,7 @@ import mlflow
 from mlflow.tracking import MlflowClient
 from memoized_property import memoized_property
 from sklearn.model_selection import train_test_split
+import joblib
 
 estimat = LinearRegression()
 MLFLOW_URI = "https://mlflow.lewagon.co/"
@@ -83,6 +84,10 @@ class Trainer():
     def mlflow_log_metric(self, key, value):
         self.mlflow_client.log_metric(self.mlflow_run.info.run_id, key, value)
 
+    def save_model(self):
+        """ Save the trained model into a model.joblib file """
+        joblib.dump(self.pipeline, 'model.joblib')
+
 
 if __name__ == "__main__":
     df = get_data()
@@ -95,3 +100,4 @@ if __name__ == "__main__":
     score = trainer.evaluate()
     trainer.mlflow_log_metric('rmse', score)
     trainer.mlflow_log_param('estimator', estimat)
+    #joblib.dump(pipeline, 'model.joblib')
