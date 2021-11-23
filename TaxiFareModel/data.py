@@ -24,5 +24,13 @@ def clean_data(df, test=False):
     return df
 
 
+def define_X(df):
+    return df.drop("fare_amount", axis=1)
+
+
+def define_y(df):
+    return df["fare_amount"]
+
+
 if __name__ == '__main__':
     df = get_data()
